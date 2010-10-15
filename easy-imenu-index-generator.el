@@ -66,11 +66,11 @@
   "alist用getter."
   (cdr (assq name iter)))
 
-(defun easy-imenu-index-generator-imenu-create-index (source)
+(defun easy-imenu-index-generator-imenu-create-index (setting)
   "get current buffer imenu index."
   (save-excursion
     (let ((index-list))
-      (dolist (iter (easy-imenu-index-generator-setting-alist source))
+      (dolist (iter (easy-imenu-index-generator-setting-alist setting))
 	(goto-char (point-min))
 	(while (re-search-forward (easy-imenu-index-generator-imenu-alist-attr 'regexp iter) nil t)
 	  (goto-char (match-beginning 0))
@@ -85,11 +85,11 @@
 	  (goto-char (match-end 0))))
       (nreverse index-list))))
 
-(defun easy-imenu-index-generator-set-for-current-buffer (source)
+(defun easy-imenu-index-generator-set-for-current-buffer (setting)
   "imenuに使用するsourceを設定する。
    ***-mode-hookなどで呼びだすとmode別imenu設定が可能。"
   (interactive)
   (setq imenu-create-index-function
-	`(lambda () (interactive) (easy-imenu-index-generator-imenu-create-index ,source))))
+	`(lambda () (interactive) (easy-imenu-index-generator-imenu-create-index ,setting))))
 
 (provide 'easy-imenu-index-generator)

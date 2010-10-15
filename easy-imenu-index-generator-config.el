@@ -54,11 +54,11 @@
    :alist
    `(
      ((caption . "[CLASS]  ")
-      (regexp . "^[ \t]*\\(abstract \\)?\\(case \\)?class[ \n\t]+\\([a-zA-Z_]+[a-zA-Z0-9_]*\\)"))
+      (regexp . "^[ \t]*\\(abstract \\)?\\(case \\)?class[ \t]+\\([a-zA-Z_]+[a-zA-Z0-9_]*\\)"))
      ((caption . "[OBJECT] ")
-      (regexp . "^[ \t]*object[ \n\t]+\\([a-zA-Z_]+[a-zA-Z0-9_]*\\)"))
+      (regexp . "^[ \t]*object[ \t]+\\([a-zA-Z_]+[a-zA-Z0-9_]*\\)"))
      ((caption . "[TRAIT]  ")
-      (regexp . "^[ \t]*trait[ \n\t]+\\([a-zA-Z_]+[a-zA-Z0-9_]*\\)"))
+      (regexp . "^[ \t]*trait[ \t]+\\([a-zA-Z_]+[a-zA-Z0-9_]*\\)"))
      ((caption . "[FUNC]   ")
       (regexp . "^[ \t]*\\(private \\)?\\(override \\)?\\(final \\)?\\(def \\)+\\([a-zA-Z_]+[a-zA-Z0-9_]*\\)"))
      ((caption . "[VAL]    ")
