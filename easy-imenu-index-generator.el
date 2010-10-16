@@ -77,7 +77,7 @@
 	  (push (cons
 		 (concat (easy-imenu-index-generator-imenu-alist-attr 'caption iter)
 			 (replace-regexp-in-string "[\n\t]" " " (thing-at-point 'line))
-			 (when (easy-imenu-index-generator-setting-add-line-number-to-item source)
+			 (when (easy-imenu-index-generator-setting-add-line-number-to-item setting)
 			   (number-to-string (count-lines (point-min) (match-beginning 0))))
 			 )
 		 (point))
@@ -90,6 +90,6 @@
    ***-mode-hookなどで呼びだすとmode別imenu設定が可能。"
   (interactive)
   (setq imenu-create-index-function
-	`(lambda () (interactive) (easy-imenu-index-generator-imenu-create-index ,setting))))
+	`(lambda () (interactive) (easy-imenu-index-generator-imenu-create-index setting))))
 
 (provide 'easy-imenu-index-generator)
