@@ -62,9 +62,9 @@
      ((caption . "[FUNC]   ")
       (regexp . "^[ \t]*\\(private \\)?\\(override \\)?\\(final \\)?\\(def \\)+\\([a-zA-Z_]+[a-zA-Z0-9_]*\\)"))
      ((caption . "[VAL]    ")
-      (regexp . "^[ \t]*\\(private \\)?\\var[ \t]"))
-     ((caption . "[VAR]    ")
       (regexp . "^[ \t]*\\(private \\)?\\val[ \t]"))
+     ((caption . "[VAR]    ")
+      (regexp . "^[ \t]*\\(private \\)?\\var[ \t]"))
      )
    :add-line-number-to-item t
    ))
