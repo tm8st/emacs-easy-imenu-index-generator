@@ -90,6 +90,6 @@
    ***-mode-hookなどで呼びだすとmode別imenu設定が可能。"
   (interactive)
   (setq imenu-create-index-function
-	`(lambda () (interactive) (easy-imenu-index-generator-imenu-create-index setting))))
+	`(lambda () (interactive) (easy-imenu-index-generator-imenu-create-index ,setting))))
 
 (provide 'easy-imenu-index-generator)
