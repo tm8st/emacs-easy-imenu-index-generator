@@ -83,7 +83,6 @@
       (regexp . "^[ \t]*\\(simulated \\)?\\(event \\)\\([a-zA-Z_]+[a-zA-Z0-9_]*\\)"))	
      ((caption . "[Classs]")
       (regexp . "^[ \t]*class[ \n\t]+\\([a-zA-Z_]+[a-zA-Z0-9_]*\\)"))
-     ;; (regexp . "^[ \t]*class[ \n\t]+\\([a-zA-Z_]+[a-zA-Z0-9_]*\\)[ \t\n]*\\(:\\|{\\)"))
      ((caption . "[Strucs]")
       (regexp . "^[ \t]*struct[ \n\t]+\\([a-zA-Z_]+[a-zA-Z0-9_]*\\)[ \t\n]*[{]"))
      )

@@ -50,9 +50,9 @@
   (make-easy-imenu-index-generator-setting
    :alist
    `(
-     ((caption . "[defun] ")
+     ((caption . "[defun]     ")
       (regexp . "^[\t ]*(defun "))
-     ((caption . "[defvar] ")
+     ((caption . "[defvar]    ")
       (regexp . "^[\t ]*(defvar "))
      ((caption . "[defstruct] ")
       (regexp . "^[\t ]*(defstruct "))
@@ -76,9 +76,9 @@
 	  (goto-char (match-beginning 0))
 	  (push (cons
 		 (concat (easy-imenu-index-generator-imenu-alist-attr 'caption iter)
-			 (replace-regexp-in-string "[\n\t]" " " (thing-at-point 'line))
 			 (when (easy-imenu-index-generator-setting-add-line-number-to-item setting)
-			   (number-to-string (count-lines (point-min) (match-beginning 0))))
+			   (concat (format "%6d" (count-lines (point-min) (match-beginning 0))) " "))
+			 (replace-regexp-in-string "[\n\t]" " " (thing-at-point 'line))
 			 )
 		 (point))
 		index-list)
